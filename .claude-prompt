@@ -1,0 +1,32 @@
+You are building a FRONTEND project. Implement the COMPLETE application:
+
+1. **HTML** (index.html): Build the full UI with semantic HTML. Include all interactive elements, forms, buttons, displays.
+
+2. **CSS** (src/style.css): Create a polished, modern dark-theme design. Add:
+   - Smooth transitions and hover effects
+   - Responsive layout (mobile-first)
+   - Loading states and animations
+   - Professional typography and spacing
+
+3. **JavaScript** (src/app.js): Implement ALL logic:
+   - Full interactivity — every button, input, and feature must work
+   - Local storage for persistence where appropriate
+   - Keyboard shortcuts where relevant
+   - Error handling for all user interactions
+
+4. **README.md**: Update with actual feature list, usage instructions, and keyboard shortcuts.
+
+The app must be fully functional when opening index.html in a browser. No build tools needed.
+
+---
+PROJECT DETAILS:
+- Name: pathfinding-visualizer
+- Title: Pathfinding Algorithm Visualizer
+- Description: Visualize A*, Dijkstra, BFS, DFS on a grid with walls, weights, and speed control.
+- Category: frontend
+- Difficulty: intermediate
+- Tags: algorithms, pathfinding, visualization
+
+Implement EVERYTHING now. The project must be complete and fully functional when you're done.
+After implementation, commit all changes with message: "Implement complete Pathfinding Algorithm Visualizer"
+Then push to origin main.
