@@ -12,10 +12,117 @@
       <h1>Pathfinding Algorithm Visualizer</h1>
       <p>Visualize A*, Dijkstra, BFS, DFS on a grid with walls, weights, and speed control.</p>
     </header>
+
     <main>
-      <!-- Your app content here -->
+      <section class="controls" aria-label="Controls">
+        <div class="controls-row">
+          <div class="control-group">
+            <label for="algorithm-select">Algorithm</label>
+            <select id="algorithm-select">
+              <option value="astar">A* Search</option>
+              <option value="dijkstra">Dijkstra's</option>
+              <option value="bfs">BFS</option>
+              <option value="dfs">DFS</option>
+            </select>
+          </div>
+
+          <div class="control-group">
+            <label for="speed-select">Speed</label>
+            <select id="speed-select">
+              <option value="slow">Slow</option>
+              <option value="medium" selected>Medium</option>
+              <option value="fast">Fast</option>
+              <option value="instant">Instant</option>
+            </select>
+          </div>
+
+          <div class="control-group">
+            <label for="tool-select">Tool</label>
+            <select id="tool-select">
+              <option value="wall">Wall</option>
+              <option value="weight">Weight (5)</option>
+              <option value="start">Start Node</option>
+              <option value="end">End Node</option>
+              <option value="eraser">Eraser</option>
+            </select>
+          </div>
+
+          <div class="control-group">
+            <label for="grid-size">Grid Size</label>
+            <select id="grid-size">
+              <option value="small">Small (15x15)</option>
+              <option value="medium" selected>Medium (25x25)</option>
+              <option value="large">Large (35x35)</option>
+              <option value="xlarge">XL (50x30)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="controls-row controls-actions">
+          <button id="btn-visualize" class="btn btn-primary">
+            <span class="btn-icon">&#9654;</span> Visualize
+          </button>
+          <button id="btn-clear-path" class="btn btn-secondary">Clear Path</button>
+          <button id="btn-clear-all" class="btn btn-secondary">Clear All</button>
+          <button id="btn-generate-maze" class="btn btn-secondary">Generate Maze</button>
+        </div>
+      </section>
+
+      <section class="grid-container" aria-label="Pathfinding Grid">
+        <div id="grid" role="grid" aria-label="Interactive pathfinding grid"></div>
+      </section>
+
+      <section class="stats-bar" aria-label="Statistics">
+        <div class="stat">
+          <span class="stat-label">Visited</span>
+          <span id="stat-visited" class="stat-value">0</span>
+        </div>
+        <div class="stat">
+          <span class="stat-label">Path Length</span>
+          <span id="stat-path" class="stat-value">0</span>
+        </div>
+        <div class="stat">
+          <span class="stat-label">Path Cost</span>
+          <span id="stat-cost" class="stat-value">0</span>
+        </div>
+        <div class="stat">
+          <span class="stat-label">Time</span>
+          <span id="stat-time" class="stat-value">0ms</span>
+        </div>
+      </section>
+
+      <section class="legend" aria-label="Legend">
+        <div class="legend-item"><span class="legend-swatch legend-start"></span> Start</div>
+        <div class="legend-item"><span class="legend-swatch legend-end"></span> End</div>
+        <div class="legend-item"><span class="legend-swatch legend-wall"></span> Wall</div>
+        <div class="legend-item"><span class="legend-swatch legend-weight"></span> Weight</div>
+        <div class="legend-item"><span class="legend-swatch legend-visited"></span> Visited</div>
+        <div class="legend-item"><span class="legend-swatch legend-path"></span> Path</div>
+      </section>
+
+      <section class="shortcuts-info">
+        <details>
+          <summary>Keyboard Shortcuts</summary>
+          <div class="shortcuts-grid">
+            <kbd>1</kbd><span>A* Search</span>
+            <kbd>2</kbd><span>Dijkstra's</span>
+            <kbd>3</kbd><span>BFS</span>
+            <kbd>4</kbd><span>DFS</span>
+            <kbd>W</kbd><span>Wall Tool</span>
+            <kbd>G</kbd><span>Weight Tool</span>
+            <kbd>S</kbd><span>Start Tool</span>
+            <kbd>E</kbd><span>End Tool</span>
+            <kbd>X</kbd><span>Eraser Tool</span>
+            <kbd>Enter</kbd><span>Visualize</span>
+            <kbd>C</kbd><span>Clear Path</span>
+            <kbd>Shift+C</kbd><span>Clear All</span>
+            <kbd>M</kbd><span>Generate Maze</span>
+          </div>
+        </details>
+      </section>
     </main>
   </div>
+
   <script src="src/app.js"></script>
 </body>
 </html>
